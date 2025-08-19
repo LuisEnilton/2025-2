@@ -27,6 +27,11 @@ pip install -r requirements
 python3 main.py
 ```
 
-O resultado da 1a. execução do main.py pode ser visualizado em [Resultados da Execução](resultado_execucao.md)
+Arquivos gerados após a execução: 
+- [Loss_Accuracy.png](resultados/Loss_Accuracy.png)
+- [reconhece_dog_cat.png](resultados/reconhece_doc_cat.png)
+- cat_dog_classifier.pth
+
+O log do resultado da 1a. execução do main.py pode ser visualizado em [Resultados da Execução](resultado_execucao.md)
 
 Detalhes do arquivo classificador (cat_dog_classifier.pth) de imagens de cães e gatos disponível em [cat_dog_classifier](classificador_gerado.md)
