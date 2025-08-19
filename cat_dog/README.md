@@ -2,7 +2,9 @@
 
 Projeto de criação de um modelo de reconhecimento de imagens de cães e gatos. 
 
-Logo abaixo seguem os passos essencias para a execução do projeto: 
+Mais detalhes técnicos sobre o projeto disponível em [Projetos.md](Projeto.md)
+
+Logo abaixo seguem os passos essencias para a execução do projeto. 
 
 ## 1. Preparação do ambiente virtual 
 
@@ -24,3 +26,7 @@ pip install -r requirements
 ```bash
 python3 main.py
 ```
+
+O resultado da 1a. execução do main.py pode ser visualizado em [Resultados da Execução](resultado_execucao.md)
+
+Detalhes do arquivo classificador (cat_dog_classifier.pth) de imagens de cães e gatos disponível em [cat_dog_classifier](classificador_gerado.md)
