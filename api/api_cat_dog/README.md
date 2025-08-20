@@ -1,6 +1,8 @@
 # CatDog Classifier API
 
-API FastAPI para classificação de imagens de gatos e cachorros usando PyTorch.
+API FastAPI para classificação de imagens de gatos e cachorros usando PyTorch. 
+
+Mais detalhes em [projeto.md](projeto.md)
 
 ## Estrutura do Projeto
 
