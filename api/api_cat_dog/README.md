@@ -88,3 +88,7 @@ print(response.json())
   "image_url": "/uploads/a1b2c3d4e5_seu_gato.jpg"
 }
 ```
+
+## Resultados do 1o. Teste
+
+O log do resultado da 1a. execução da API pode ser visualizado em [Resultados da Execução](resultados/teste1.md)
