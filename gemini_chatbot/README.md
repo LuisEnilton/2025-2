@@ -36,11 +36,11 @@ gemini-chatbot/
 └── README.md
 ```
 
-# B. Ambiente de Desenvolvimento
+## B. Ambiente de Desenvolvimento
 
 Existe uma estrutura base que vamos seguir para a construção de nossas aplicações FastAPI.
 
-## 1. Virtual Environment
+### 1. Virtual Environment
 
 Vamos usar o esquema de [virtual environment](https://docs.python.org/3/library/venv.html)
 
@@ -50,23 +50,23 @@ python3 -m venv venv
 
 Mais detalhes em [python venv](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment)
 
-### 1.1 Para ativar o venv (Linux e MacOS)
+**1.1 Para ativar o venv (Linux e MacOS)**
 
 ```bash
 source venv/bin/activate
 ```
 
-### 1.2 Para desativar o venv 
+**1.2 Para desativar o venv**
 
 ```bash
 deactivate
 ```
 
-## 2. As variáveis de ambiente da aplicação são configuradas via .evn
+### 2. As variáveis de ambiente da aplicação são configuradas via .evn
 
 Faça as devidas configurações de variáveis no arquivo backend/.env
 
-## 3. Uma vez criado e ativado o venv execute os scripts de inicialização
+### 3. Uma vez criado e ativado o venv execute os scripts de inicialização
 
 Atualização de permissão para execução. Execute no diretório raiz do projeto
 ```bash
@@ -84,21 +84,22 @@ Inicializa o ambiente client. Ative o venv e execute no diretório raiz do proje
 ./start_client.sh
 ```
 
-## 4. Após os scripts de inicilização terem sido executados 
+### 4. Após os scripts de inicialização terem sido executados 
 
-### 4.1 Executar a aplicação backend 
+**4.1 Executar a aplicação backend**
 
 Vá até o diretório gemini_chatbot/backend
 ```bash
 python3 run.py
 ```
 
-### 4.2 Executar a aplicação cliente em um novo terminal
+**4.2 Executar a aplicação cliente em um novo terminal**
+
 Vá até o diretório gemini_chatbot/client
 ```bash
 python3 chat_client.py
 ```
 
-## 5. Observações
+### 5. Observações
 
 Este protótipo só mantem o histórico das mensagens do cliente enquanto sua sessão estiver aberta, ou seja, assim que o cliente fechar sua sessão ele não consegue mais acessar seu histórico. Entretanto, a aplicação backend possui um banco que armazena todas as mensagens de todos os clientes que acessaram a aplicação pelo menos uma vez.
