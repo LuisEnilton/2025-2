@@ -6,7 +6,7 @@
 - ✅ Persistência em SQLite com SQLAlchemy ORM
 - ✅ API REST com FastAPI
 - ✅ Cliente terminal com interface rica (Rich)
-- ✅ Gerenciamento de sessões
+- ✅ Gerenciamento de sessões (apenas enquanto o cliente está ativo)
 - ✅ Histórico de conversas
 - ✅ Contagem de tokens
 - ✅ Tratamento de erros
