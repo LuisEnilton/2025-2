@@ -1,4 +1,4 @@
-# Chatbot integrado ao Gemini
+# Chatbot e API Gateway integrado a API do Google Gemini
 
 ## 📊 Funcionalidades Implementadas no Protótipo
 
