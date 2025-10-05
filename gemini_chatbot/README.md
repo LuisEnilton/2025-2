@@ -66,6 +66,12 @@ deactivate
 
 Faça as devidas configurações de variáveis no arquivo backend/.env
 
+```bash
+DATABASE_URL=sqlite:///./chatbot.db
+GEMINI_API_KEY=?
+GEMINI_MODEL=gemini-2.5-flash
+```
+
 ### 3. Uma vez criado e ativado o venv execute os scripts de inicialização
 
 Atualização de permissão para execução. Execute no diretório raiz do projeto
