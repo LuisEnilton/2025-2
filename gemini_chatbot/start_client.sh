@@ -1,11 +1,22 @@
 #!/bin/bash
 
 # Script para iniciar o cliente do Gemini ChatBot
-# Uso: ./start_client.sh
+# Uso: ./start_client.sh [IP_DO_SERVIDOR]
 
 set -e  # Sai imediatamente se algum comando falhar
 
+# Verificar se foi fornecido um IP como parâmetro
+if [ $# -eq 0 ]; then
+    echo "❌ Erro: IP do servidor não fornecido"
+    echo "Uso: $0 <IP_DO_SERVIDOR>"
+    echo "Exemplo: ./start_client.sh 10.13.63.20"
+    exit 1
+fi
+
+SERVER_IP="$1"
+
 echo "🚀 Iniciando setup do cliente..."
+echo "📡 Conectando ao servidor: $SERVER_IP"
 
 # Navegar para o diretório client
 echo "📁 Navegando para o diretório client..."
@@ -34,6 +45,7 @@ else
     exit 1
 fi
 
-# Executar o cliente
+# Executar o cliente com o IP fornecido
 echo "🎯 Iniciando cliente de chat..."
-python3 chat_client.py
+echo "🔗 Conectando ao servidor: $SERVER_IP"
+python3 chat_client.py "$SERVER_IP"
