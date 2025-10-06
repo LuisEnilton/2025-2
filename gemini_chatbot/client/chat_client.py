@@ -8,12 +8,13 @@ from rich.console import Console
 from rich.panel import Panel
 from rich.markdown import Markdown
 from rich import print as rprint
+import sys
 
 load_dotenv()
 
 class ChatClient:
-    def __init__(self):
-        self.base_url = os.getenv("API_URL", "http://localhost:8000")
+    def __init__(self, ip_servidor):
+        self.base_url = os.getenv("API_URL", f"http://{ip_servidor}:8000")
         self.session_id = str(uuid.uuid4())
         self.console = Console()
         
@@ -123,5 +124,9 @@ class ChatClient:
             self.console.print(f"[red]Erro ao buscar histórico: {str(e)}[/red]")
 
 if __name__ == "__main__":
-    client = ChatClient()
-    client.start_chat()
+    if len(sys.argv) > 1:
+        ip_servidor = sys.argv[1]
+        client = ChatClient(ip_servidor)
+        client.start_chat()
+    else:
+        print("Por favor forneça o IP do servidor")
