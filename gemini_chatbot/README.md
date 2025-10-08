@@ -87,7 +87,7 @@ Inicializa o ambiente de backend. Ative o venv e execute no diretório raiz do p
 
 Inicializa o ambiente client. Ative o venv e execute no diretório raiz do projeto
 ```bash
-./start_client.sh
+./start_client.sh IP_Servidor
 ```
 
 ### 4. Após os scripts de inicialização terem sido executados 
@@ -103,7 +103,7 @@ python3 run.py
 
 Vá até o diretório gemini_chatbot/client
 ```bash
-python3 chat_client.py
+python3 chat_client.py IP_Servidor
 ```
 
 ### 5. Observações
