@@ -6,13 +6,9 @@ Engenharia de Prompt é a disciplina que projeta, testa e otimiza instruções e
 
 **Palavras-chave:** LLM, Prompt Engineering, CoT, Self-Consistency, Prompt Chaining, ToT, RAG, Avaliação.
 
----
-
 ## 1. Motivação e Escopo
 
 LLMs tornaram-se interfaces universais para tarefas de **QA, extração, resumo, geração de código e raciocínio**. A Engenharia de Prompt surge como a camada de **engenharia de software** que traduz intenções humanas em **comportamentos de IA controláveis**, maximizando utilidade e minimizando riscos (alucinação, formatação inválida, desvios de política).
-
----
 
 ## 2. Conceitos Fundamentais
 
@@ -32,8 +28,6 @@ Um **prompt** é um comando textual estruturado que orienta um LLM. Em geral, co
 
 > Regra prática: **ajuste um de cada vez** e alinhe ao tipo de tarefa.
 
----
-
 ## 3. Elementos e Boas Práticas de Design
 
 **Checklist de um bom prompt**
@@ -51,8 +45,6 @@ Um **prompt** é um comando textual estruturado que orienta um LLM. Em geral, co
 * Exemplos longos e inconsistentes
 * Omitir regra de “não sei”
 * Deixar o formato “implícito” (gera instabilidade)
-
----
 
 ## 4. Paradigmas de Prompting
 
@@ -83,8 +75,6 @@ Classifique {positivo, neutro, negativo}. Responda só com o rótulo.
 ```
 
 **Dicas:** manter **rótulos** e **formato** constantes; cobrir casos de borda.
-
----
 
 ## 5. Técnicas Avançadas
 
@@ -128,8 +118,6 @@ Divida a tarefa em **estágios** (p.ex., *extrair → responder → reescrever �
 
 Generaliza CoT com **busca** (BFS/DFS/beam) sobre múltiplas trajetórias (“pensamentos”), com **lookahead** e **backtracking**. Excelente para planejamento/estratégia; mais caro. Defina limites de **candidatos (b)** e **profundidade (d)**.
 
----
-
 ## 6. Robustez, Segurança e Governança
 
 ### 6.1 Antialucinação e Regras
@@ -154,8 +142,6 @@ Generaliza CoT com **busca** (BFS/DFS/beam) sobre múltiplas trajetórias (“pe
 * Armazene **resumos** do raciocínio, não o raciocínio literal, quando sensível.
 * Redija políticas de retenção e auditoria.
 
----
-
 ## 7. Métricas e Avaliação de Prompts
 
 ### 7.1 Métricas Offline
@@ -176,8 +162,6 @@ Generaliza CoT com **busca** (BFS/DFS/beam) sobre múltiplas trajetórias (“pe
 * *Golden set* rotulado por humanos
 * *Canary prompts* para regressões
 
----
-
 ## 8. Workflow de Engenharia (do laboratório à produção)
 
 1. **Especificação**: tarefa, formato, limites, política de segurança
@@ -188,8 +172,6 @@ Generaliza CoT com **busca** (BFS/DFS/beam) sobre múltiplas trajetórias (“pe
 6. **Versionamento**: `qa_extracao_v3`, `resposta_citada_v2`
 7. **Avaliação contínua**: testes automáticos + revisões humanas
 8. **Governança**: auditoria, PII, retenção, red teaming
-
----
 
 ## 9. Templates Prontos (copiar/colar)
 
@@ -241,8 +223,6 @@ Usando APENAS as citações em <quotes>...</quotes>, responda em ≤80 palavras.
 Se não for possível responder, diga "INSUFICIENTE".
 ```
 
----
-
 ## 10. Estudos de Caso Típicos
 
 * **QA factual com RAG**: few-shot para formato + “INSUFICIENTE” + validação de citações
@@ -250,8 +230,6 @@ Se não for possível responder, diga "INSUFICIENTE".
 * **Geração de código**: few-shot com exemplos mínimos e contratos (linguagem, versão, estilo)
 * **Raciocínio matemático**: CoT + Self-Consistency (K=5..15) com *post-check* aritmético
 * **Planejamento**: ToT com `b=3..5`, `d=3..5`, timeout e heurísticas de descarte
-
----
 
 ## 11. Exercícios Sugeridos
 
@@ -262,13 +240,9 @@ Se não for possível responder, diga "INSUFICIENTE".
 5. **Prompt Chaining:** pipeline *documento → citações → resposta* com validação de JSON.
 6. **ToT simples:** resolver “24 Game” com `b=3`, `d=3` e relatar taxa de sucesso.
 
----
-
 ## 12. Conclusão
 
 Engenharia de Prompt é o “sistema operacional” da interação com LLMs: **define o contrato**, **controla o comportamento** e **ancora a confiabilidade**. Comece simples (zero-shot), estabilize formato e estilo (few-shot), **desbloqueie raciocínio** (CoT/Zero-shot CoT), **aumente robustez** (Self-Consistency, Generated-Knowledge), e **industrialize** com **Prompt Chaining/ToT**, validação, observabilidade e governança. Esse arcabouço permite construir aplicações de IA generativa **precisas, seguras e reprodutíveis**.
-
----
 
 ### Apêndice A — Tabela “quando usar o quê”
 
