@@ -36,6 +36,10 @@ gemini-chatbot/
 └── README.md
 ```
 
+### Detalhes do projeto
+
+Disponível em https://github.com/topicos-computacao-aplicada/2025-2/blob/main/gemini_chatbot/projeto.md
+
 ## B. Ambiente de Desenvolvimento
 
 Existe uma estrutura base que vamos seguir para a construção de nossas aplicações FastAPI.
