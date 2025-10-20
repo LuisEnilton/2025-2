@@ -15,3 +15,7 @@ Exemplo de Aplicação de Visão Computacional usando Deep Learning
 ## IA Generativa
 - [Exemplo de pipeline de transcrição e tradução de música](notebooks/pipeline_traduz_musica_ingles_para_portugues.ipynb)
 - [Exemplo simplificado de Chatbot integrado a API do Google Gemini](https://github.com/topicos-computacao-aplicada/2025-2/tree/main/gemini_chatbot)
+
+### Prompt Engineering
+- [Fundamentos de Engenharia de Prompt](https://github.com/topicos-computacao-aplicada/2025-2/blob/main/docs/fundamentos_engenharia_prompt_llm.md)
+- [Prompt de Sistema e Prompt de Usuário](https://github.com/topicos-computacao-aplicada/2025-2/blob/main/docs/system_prompt_user_prompt.md)
