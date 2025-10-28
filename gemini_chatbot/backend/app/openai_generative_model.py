@@ -2,6 +2,12 @@ from openai import OpenAI
 from app.schemas import LLMParameters
 
 
+# Classe wrapper para manter compatibilidade com a interface do Gemini (atributo .text)
+class OpenAIResponse:
+    def __init__(self, text: str):
+        self.text = text
+
+
 # Essa classe é um adapter feito para ter a mesma interface da classe genai.GenerativeModel
 class OpenAIGenerativeModel:
     def __init__(self,model_name="gpt-4o-mini", generation_config: LLMParameters = None):
@@ -16,4 +22,6 @@ class OpenAIGenerativeModel:
             messages=[{"role": "user", "content": full_prompt}],
             **self.config
         )
-        return response.choices[0].message.content
+        
+        # Retornar objeto com atributo .text (mesma interface do Gemini)
+        return OpenAIResponse(text=response.choices[0].message.content)
