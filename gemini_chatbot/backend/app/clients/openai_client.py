@@ -2,7 +2,7 @@ from dotenv import load_dotenv
 import os
 import google.generativeai as genai
 from typing import List, Dict
-from app.abstract_client import AbstractClient
+from app.clients.abstract_client import AbstractClient
 from app.schemas import LLMParameters
 from app.openai_generative_model import OpenAIGenerativeModel
 load_dotenv()
