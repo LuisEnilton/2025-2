@@ -3,6 +3,7 @@
 ## 📊 Funcionalidades Implementadas no Protótipo
 
 - ✅ Integração com Google Gemini API
+- ✅ Integração com OpenAI API
 - ✅ Persistência em SQLite com SQLAlchemy ORM
 - ✅ API REST com FastAPI
 - ✅ Cliente terminal com interface rica (Rich)
@@ -74,6 +75,8 @@ Faça as devidas configurações de variáveis no arquivo backend/.env
 DATABASE_URL=sqlite:///./chatbot.db
 GEMINI_API_KEY=?
 GEMINI_MODEL=gemini-2.5-flash
+OPENAI_API_KEY=?
+OPENAI_MODEL=gpt-4o-mini
 ```
 
 ### 3. Uma vez criado e ativado o venv execute os scripts de inicialização
